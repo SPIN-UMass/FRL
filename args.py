@@ -35,6 +35,13 @@ def parse_arguments():
     )
    
     parser.add_argument(
+        "--conv_init",
+        type=str,
+        default="default",
+        help="How to initialize the conv weights.",
+    )
+    
+    parser.add_argument(
         "--batch_size",
         type=int,
         default=8,

@@ -10,6 +10,7 @@ Please make sure you have the following dependencies installed:
 
 - PyTorch 1.13.1 
 - Numpy 1.23.5
+- Torchvision 0.14.1
 
 ### Installation
 
@@ -26,13 +27,19 @@ Then, to install the dependencies, run:
 pip install -r requirements.txt
 ```
 
+
+### Path to dataset location
+
+Variable 'data_loc' in the config files in experiemnt directory shows the path to dataset (for creation or existing dataset).
+
+
 ## Basic Test
 
 To run a simple experiment on CIFAR10, please run the following command:
 
 
 ```bash
-python experiments/001_config_CIFAR10_Conv8_FRL_1000users_noniid1.0_nomalicious.txt
+python main.py --config experiments/001_config_CIFAR10_Conv8_FRL_1000users_noniid1.0_nomalicious.txt
 ```
 
 

@@ -1,0 +1,14 @@
+seed=0
+log_dir=Logs
+set=MNIST
+nClients=1000
+non_iid_degree=1.0
+batch_size=8
+test_batch_size=128
+FL_type=FedAVG
+local_epochs=2
+FL_global_epochs=2000
+lr=0.01
+at_fractions=0.2
+model=LeNet
+name=FedAVG_MNIST_20p_mal

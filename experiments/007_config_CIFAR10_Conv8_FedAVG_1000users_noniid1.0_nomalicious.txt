@@ -1,0 +1,14 @@
+seed=0
+log_dir=Logs
+set=CIFAR10
+nClients=1000
+non_iid_degree=1.0
+batch_size=8
+test_batch_size=128
+FL_type=FedAVG
+local_epochs=5
+FL_global_epochs=2000
+lr=0.02
+lrdc=0.9995
+model=Conv8
+name=FedAVG_CIFAR10_no_mal

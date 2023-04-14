@@ -57,8 +57,10 @@ def main():
     print ("type of conv layer: ", args.FL_type)
     if args.FL_type == "FRL":
         FRL_train(tr_loaders, te_loader)
+    elif args.FL_type == "FedAVG":
+        FedAVG(tr_loaders, te_loader)
     else:
-        Standard_FL_train()
+        FedAVG(tr_loaders, te_loader)
 
    
 if __name__ == "__main__":

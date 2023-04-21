@@ -183,6 +183,7 @@ def FedAVG(tr_loaders, te_loader):
         
         if (e+1)%1==0:
             t_loss, t_acc = test(te_loader, FLmodel, criterion, args.device) 
+            
             if t_acc>t_best_acc:
                 t_best_acc=t_acc
 
@@ -190,3 +191,8 @@ def FedAVG(tr_loaders, te_loader):
             print (sss)
             with (args.run_base_dir / "output.txt").open("a") as f:
                 f.write("\n"+str(sss))
+                
+            if math.isnan(t_loss) or t_loss > 10000:
+                print('val loss %f... exit: The global model is totally destroyed by the adversary' % t_loss)
+                break
+        e+=1

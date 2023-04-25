@@ -54,11 +54,15 @@ def main():
     
     
     #Federated Learning
-    print ("type of conv layer: ", args.FL_type)
+    print ("type of FL: ", args.FL_type)
     if args.FL_type == "FRL":
         FRL_train(tr_loaders, te_loader)
     elif args.FL_type == "FedAVG":
         FedAVG(tr_loaders, te_loader)
+    elif args.FL_type == "trimmedMean":
+        Tr_Mean(tr_loaders, te_loader)
+    elif args.FL_type == "Mkrum":
+        Mkrum(tr_loaders, te_loader)
     else:
         FedAVG(tr_loaders, te_loader)
 

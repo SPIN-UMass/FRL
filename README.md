@@ -53,3 +53,14 @@ python main.py --data_loc "/CIFAR10/data/" --config experiments/001_config_CIFAR
 - Note that argument 'data_loc' shows the path to dataset storage (for creation or existing dataset).
 
 This will distribute CIFAR10 over 1000 clients in a non-iid fashion with a Dirichlet distribution parameter $\beta=1.0$. Then, a federated rank learning will be run on top of these 1000 users for 2000 global FL rounds, where 25 clients are chosen for their local update in each round.
+
+## Citation
+
+```
+@inproceedings{mozaffarievery,
+  title={Every Vote Counts: Ranking-Based Training of Federated Learning to Resist Poisoning Attacks},
+  author={Mozaffari, Hamid and Shejwalkar, Virat and Houmansadr, Amir},
+  booktitle={32nd USENIX Security Symposium (USENIX Security 23)},
+  year={2023}
+}
+```
